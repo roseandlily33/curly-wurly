@@ -1,12 +1,16 @@
 import {useState} from 'react';
 import DisplayTodos from './Components/DisplayTodo';
 const Main = () => {
-    const[todos, setTodos] = useState(['add a todo']);
+    const[todos, setTodos] = useState([]);
     const[newTodo, setNewTodo] = useState('');
     const handleSubmit = () => {
-        setTodos([...todos, newTodo]);
+        if(newTodo !== ''){
+            setTodos([...todos, {
+                id: Math.floor(Math.random() * 1000),
+                newTodo}]);
+            setNewTodo('');
+        }
     };
-
     return ( 
         <main>
         <div id="inputForm">
