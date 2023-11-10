@@ -1,19 +1,9 @@
-import { useState } from "react";
-const DisplayTodos = ({todos}) => {
-    const[todo, setTodos]=useState([todos]);
-    const deleteTodo = (todoId) => {
-        console.log('deleting', todoId);
-        const removed = todos.filter((each) => {
-        return todoId !== each.id;
-        });
-       setTodos(removed);
-    }
-    console.log('todos', todos);
+const DisplayTodos = ({todos, deleteTodo}) => {
     return ( 
        <div>
          {todos.map((t, i) => (
-            <div id="eachTodo">
-                <div key={t.id}id="leftTodo">
+            <div key={t.id} id="eachTodo">
+                <div id="leftTodo">
                 <h1>{i + 1}</h1>
                 <h1>{t.newTodo}</h1>
                 </div>

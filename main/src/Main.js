@@ -11,13 +11,20 @@ const Main = () => {
             setNewTodo('');
         }
     };
+    const deleteTodo = (todoId) => {
+        console.log('deleting', todoId);
+        const removed = todos.filter((each) => {
+        return todoId !== each.id;
+        });
+       setTodos(removed);
+    }
     return ( 
         <main>
         <div id="inputForm">
             <input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)}></input>
             <button type="submit" onClick={handleSubmit}>Add Todo</button>
         </div>
-        <DisplayTodos todos={todos} />
+        <DisplayTodos todos={todos} deleteTodo={deleteTodo}/>
         </main>
 
      );
