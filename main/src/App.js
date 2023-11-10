@@ -1,12 +1,17 @@
-import './App.css';
+import Main from './Components/Main';
+import { TodoContext } from './context';
+
 
 function App() {
+  const todo = 'hi'
   return (
-    <div className="App">
+    <TodoContext.Provider value={todo}>
+      <div className="App">
       <header className="App-header">
-       <h1>Hi</h1>
+       <Main />
       </header>
     </div>
+    </TodoContext.Provider>
   );
 }
 
