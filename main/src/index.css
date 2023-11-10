@@ -1,5 +1,54 @@
 *{
   margin: 0;
-  padding: 0;
+  padding: 0.2em;
   box-sizing: border-box;
+  color: var(--pink);
+}
+
+:root{
+  --teal:#688983;
+  --pink: #d89b8b;
+  --cream: #e1d1c1;
+  --yellow: 	#e1994e;
+  --extraCream: #eee1d7;
+  --borderRadius: 5px;
+}
+body{
+  background-color: var(--cream);
+}
+header{
+  text-align: center;
+  font-size: 2em;
+}
+button{
+  border: none;
+  background-color: var(--teal);
+  color: var(--cream);
+  padding: 1.2em;
+  border-radius: var(--borderRadius);
+  margin-left: 1em;
+}
+input{
+  border-radius: var(--borderRadius);
+  border: 3px solid var(--teal);
+  color: darkslategray;
+}
+#inputForm{
+  display: flex;
+  justify-content: center;
+}
+/* The todo list */
+#eachTodo{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: var(--extraCream);
+  border-radius: var(--borderRadius);
+  margin-bottom: 0.5em;
+}
+#leftTodo{
+  display: flex;
+  flex-direction: row;
 }
